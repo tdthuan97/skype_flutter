@@ -45,7 +45,11 @@ class _ChatListPageState extends State<ChatListPage> {
             Icons.search,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "/search_page");
+//            Navigator.push(
+//                context, MaterialPageRoute(builder: (context) => SearchPage()));
+          },
         ),
         IconButton(
           icon: Icon(
@@ -106,7 +110,8 @@ class _ChatListContainerState extends State<ChatListContainer> {
                   CircleAvatar(
                     maxRadius: 30,
                     backgroundColor: Colors.grey,
-                    backgroundImage: NetworkImage("https://yt3.ggpht.com/a/AGF-l7_zT8BuWwHTymaQaBptCy7WrsOD72gYGp-puw=s900-c-k-c0xffffffff-no-rj-mo"),
+                    backgroundImage: NetworkImage(
+                        "https://yt3.ggpht.com/a/AGF-l7_zT8BuWwHTymaQaBptCy7WrsOD72gYGp-puw=s900-c-k-c0xffffffff-no-rj-mo"),
                   ),
                   Align(
                     alignment: Alignment.bottomRight,
@@ -117,10 +122,7 @@ class _ChatListContainerState extends State<ChatListContainer> {
                           shape: BoxShape.circle,
                           color: UniversalVariables.onlineDotColor,
                           border: Border.all(
-                              color: UniversalVariables.blackColor,
-                              width: 2
-                          )
-                      ),
+                              color: UniversalVariables.blackColor, width: 2)),
                     ),
                   )
                 ],
